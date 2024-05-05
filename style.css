@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+
+:root {
+  --ungu: #6649c2;
+  --ungu-gelap: #332167;
+  --merah: #eb1560;
+  --kuning: #ffd031;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #231059, #151414);
+  color: white;
+  padding: 12px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 100px;
+}
+
+.info p:last-child {
+  margin-top: 50px;
+}
+
+a {
+  color: var(--ungu);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--ungu-gelap);
+  text-decoration: underline;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game .game-info {
+  background: var(--ungu-gelap);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game .game-info .box-player {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.game .game-info .box-player .player-label.x {
+  font-size: 24px;
+  color: var(--merah);
+  font-weight: 600;
+}
+
+.game .game-info .box-player .player-label.o {
+  font-size: 24px;
+  color: var(--kuning);
+  font-weight: 600;
+}
+
+.game .game-info .box-player .player-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.game .game-info .box-player p:last-child {
+  font-size: 14px;
+  color: #999;
+}
