@@ -65,21 +65,31 @@ a:hover {
   margin-top: 20px;
 }
 
-.game .game-info .box-player {
+.game .game-info .box-player .turn {
+  display: none;
+}
+.game .game-info .box-player.active .turn {
+  display: block;
+}
+
+.game .game-info .box-player.active {
   border: 1px solid white;
+}
+.game .game-info .box-player {
   border-radius: 8px;
   padding: 12px;
   text-align: center;
 }
 
+.game .game-info .box-player .player-label {
+  font-size: 42px;
+}
 .game .game-info .box-player .player-label.x {
-  font-size: 24px;
   color: var(--merah);
   font-weight: 600;
 }
 
 .game .game-info .box-player .player-label.o {
-  font-size: 24px;
   color: var(--kuning);
   font-weight: 600;
 }
@@ -123,6 +133,7 @@ a:hover {
   font-weight: 600;
   color: white;
   border: none;
+  cursor: pointer;
 }
 
 .kotak-tic-tac-toe.x {
@@ -131,6 +142,10 @@ a:hover {
 
 .kotak-tic-tac-toe.o {
   color: var(--kuning);
+}
+
+.kotak-tic-tac-toe:disabled {
+  cursor: not-allowed;
 }
 
 .kotak-tic-tac-toe:hover {
